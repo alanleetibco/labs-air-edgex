@@ -1,0 +1,58 @@
+name: "Idt-LoRa-MQTT-Device"
+manufacturer: "Ellenex"
+model: "dus2-l"
+labels:
+- "ultrasonic, mqtt, ros"
+description: "Ultrasonic Sensor"
+
+
+deviceResources:
+-
+  name: "distance_reading"
+  isHidden: false
+  description: "distance readings from ultrasonic sensor"
+  properties:
+    valueType: "Float32"
+    readWrite: "R"
+    minimum: "0.0"
+    maximum: "100.0"
+    defaultValue: "0.0"
+    units: "%"
+    floatEncoding: "eNotation"
+
+-
+  name: "location_reading"
+  isHidden: false
+  description: "sensor location reading"
+  properties:
+    valueType: "Object"
+    readWrite: "R"
+
+-
+  name: "gateway_info"
+  isHidden: false
+  description: "LoRa Gateway information"
+  properties:
+    valueType: "Object"
+    readWrite: "RW"
+
+
+deviceCommands:
+-
+  name: dcDistanceReading
+  readWrite: "R"
+  isHidden: false
+  resourceOperations:
+    - { deviceResource: "distance_reading" }
+-
+  name: dcLocationReading
+  readWrite: "R"
+  isHidden: false
+  resourceOperations:
+    - { deviceResource: "location_reading" }
+-
+  name: dcGatewayInfo
+  readWrite: "R"
+  isHidden: false
+  resourceOperations:
+    - { deviceResource: "gateway_info" }

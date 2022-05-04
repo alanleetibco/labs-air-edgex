@@ -1,0 +1,15 @@
+[[DeviceList]]
+  Name = "IdtLoRaMQTTDevice"
+  ProfileName = "Idt-LoRa-MQTT-Device"
+  Description = "Idt-LoRa-MQTT-Device"
+  Labels = [ "ULTRASONIC", "MQTT", "ROS" ]
+  [DeviceList.Protocols]
+    [DeviceList.Protocols.mqtt]
+       # Comment out/remove below to use multi-level topics
+       CommandTopic = "CommandTopic"
+       # Uncomment below to use multi-level topics
+       # CommandTopic = "command/MQTT-test-device"
+#    [[DeviceList.AutoEvents]]
+#       Interval = "20s"
+#       OnChange = false
+#       SourceName = "testrandfloat32"
