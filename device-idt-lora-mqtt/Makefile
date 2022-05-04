@@ -11,7 +11,7 @@ DOCKERS=docker_device_idt_lora_mqtt
 VERSION=$(shell cat ./VERSION)
 GIT_SHA=$(shell git rev-parse HEAD)
 
-GOFLAGS=-ldflags "-X github.com/TIBCOSoftware/labs-air/edgexfoundry/device-idt-lora-mqtt.Version=$(VERSION)"
+GOFLAGS=-ldflags "-X github.com/alanleetibco/labs-air-edgex/device-idt-lora-mqtt.Version=$(VERSION)"
 
 build: $(MICROSERVICES)
 
@@ -33,19 +33,19 @@ docker: $(DOCKERS)
 docker_device_idt_lora_mqtt:
 	docker build --no-cache \
 		--label "git_sha=$(GIT_SHA)" \
-		-t tibcosoftware/labs-air-edgex-device-idt-lora-mqtt:$(VERSION) \
+		-t alanleetibco/labs-air-edgex-device-idt-lora-mqtt:$(VERSION) \
 		.
 
 dockerarm64:
 	docker build --no-cache \
 		--label "git_sha=$(GIT_SHA)" \
-		-t tibcosoftware/labs-air-edgex-device-idt-lora-mqtt-arm64:$(VERSION) \
+		-t alanleetibco/labs-air-edgex-device-idt-lora-mqtt-arm64:$(VERSION) \
 		.
 
 dockerbuildxarm64:
 	docker buildx build \
 		--platform linux/arm64 \
 		--label "git_sha=$(GIT_SHA)" \
-		-t alanlee/docker-device-idt-lora-mqtt-arm64:$(VERSION) \
+		-t alanleetibco/docker-device-idt-lora-mqtt-arm64:$(VERSION) \
 		.
 

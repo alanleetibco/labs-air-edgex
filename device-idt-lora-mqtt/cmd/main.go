@@ -7,8 +7,8 @@
 package main
 
 import (
-	device_generic_mqtt "github.com/TIBCOSoftware/labs-air/edgexfoundry/device-idt-lora-mqtt"
-	"github.com/TIBCOSoftware/labs-air/edgexfoundry/device-idt-lora-mqtt/internal/driver"
+	device_generic_mqtt "github.com/alanleetibco/labs-air-edgex/device-idt-lora-mqtt"
+	"github.com/alanleetibco/labs-air-edgex/device-idt-lora-mqtt/internal/driver"
 	"github.com/edgexfoundry/device-sdk-go/v2/pkg/startup"
 )
 
