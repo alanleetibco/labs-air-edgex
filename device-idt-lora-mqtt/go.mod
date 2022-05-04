@@ -1,4 +1,4 @@
-module github.com/TIBCOSoftware/labs-air/edgexfoundry/device-jetmax-mqtt
+module github.com/alanleetibco/labs-air-edgex/device-idt-lora-mqtt
 
 go 1.16
 
